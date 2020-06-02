@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		284B06A324859EA0004B8071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B06A124859EA0004B8071 /* Main.storyboard */; };
 		284B06A524859EA2004B8071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284B06A424859EA2004B8071 /* Assets.xcassets */; };
 		284B06A824859EA2004B8071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B06A624859EA2004B8071 /* LaunchScreen.storyboard */; };
+		284B06B12485B872004B8071 /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B06B02485B872004B8071 /* DonateVC.swift */; };
+		F3672745597883ED8C29E58A /* Pods_AppGain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4F20471068A0793A0DD887 /* Pods_AppGain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		284B06A424859EA2004B8071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284B06A724859EA2004B8071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284B06A924859EA2004B8071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284B06B02485B872004B8071 /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
+		7C4F20471068A0793A0DD887 /* Pods_AppGain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppGain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B80CEEA40F45BAC106D8B3 /* Pods-AppGain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGain.debug.xcconfig"; path = "Target Support Files/Pods-AppGain/Pods-AppGain.debug.xcconfig"; sourceTree = "<group>"; };
+		FAE8AF91F6FDA874966C096B /* Pods-AppGain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGain.release.xcconfig"; path = "Target Support Files/Pods-AppGain/Pods-AppGain.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3672745597883ED8C29E58A /* Pods_AppGain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				284B069A24859EA0004B8071 /* AppGain */,
 				284B069924859EA0004B8071 /* Products */,
+				33E908F7A8D819788E65CA4B /* Pods */,
+				DB94C3AB0ACC32CA68FDFF5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		284B069A24859EA0004B8071 /* AppGain */ = {
 			isa = PBXGroup;
 			children = (
+				284B06AF2485B85D004B8071 /* Donatne */,
 				284B069B24859EA0004B8071 /* AppDelegate.swift */,
 				284B069D24859EA0004B8071 /* SceneDelegate.swift */,
 				284B069F24859EA0004B8071 /* ViewController.swift */,
@@ -67,6 +77,31 @@
 			path = AppGain;
 			sourceTree = "<group>";
 		};
+		284B06AF2485B85D004B8071 /* Donatne */ = {
+			isa = PBXGroup;
+			children = (
+				284B06B02485B872004B8071 /* DonateVC.swift */,
+			);
+			path = Donatne;
+			sourceTree = "<group>";
+		};
+		33E908F7A8D819788E65CA4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6B80CEEA40F45BAC106D8B3 /* Pods-AppGain.debug.xcconfig */,
+				FAE8AF91F6FDA874966C096B /* Pods-AppGain.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB94C3AB0ACC32CA68FDFF5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C4F20471068A0793A0DD887 /* Pods_AppGain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 284B06AC24859EA2004B8071 /* Build configuration list for PBXNativeTarget "AppGain" */;
 			buildPhases = (
+				488F069CDF2672ACA14F056F /* [CP] Check Pods Manifest.lock */,
 				284B069424859EA0004B8071 /* Sources */,
 				284B069524859EA0004B8071 /* Frameworks */,
 				284B069624859EA0004B8071 /* Resources */,
+				AAD7B2177B34E8AA2CCDC735 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +170,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		488F069CDF2672ACA14F056F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppGain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD7B2177B34E8AA2CCDC735 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppGain/Pods-AppGain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppGain/Pods-AppGain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppGain/Pods-AppGain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		284B069424859EA0004B8071 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				284B06A024859EA0004B8071 /* ViewController.swift in Sources */,
+				284B06B12485B872004B8071 /* DonateVC.swift in Sources */,
 				284B069C24859EA0004B8071 /* AppDelegate.swift in Sources */,
 				284B069E24859EA0004B8071 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +362,7 @@
 		};
 		284B06AD24859EA2004B8071 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B80CEEA40F45BAC106D8B3 /* Pods-AppGain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GoClean.AppGain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppGain.Assingment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +381,7 @@
 		};
 		284B06AE24859EA2004B8071 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE8AF91F6FDA874966C096B /* Pods-AppGain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,7 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GoClean.AppGain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppGain.Assingment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

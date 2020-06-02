@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,197 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppGain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-Nr-cuK">
+                                <rect key="frame" x="44" y="84" width="326" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="Y11-HA-a0P"/>
+                                </constraints>
+                                <string key="text">حملة جود2020 تهدف لرسم بسمة جديدة على وجوه المحتاجين والفقراء، مستهدفة جمع 100 مليون درهم بمشاركة كوكبة مميزة من النجوم والمبدعين والمشاهير.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBm-R9-qUx" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="44" y="229" width="326" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="W9i-7k-6R5"/>
+                                    <constraint firstAttribute="width" constant="326" id="m1r-kD-WbG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100000000"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uD-qj-NxS">
+                                <rect key="frame" x="177" y="484" width="60" height="30"/>
+                                <state key="normal" title="DONATE"/>
+                                <connections>
+                                    <action selector="donate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hs5-Bu-PtH"/>
+                                    <segue destination="IKI-28-ifl" kind="show" id="GKy-RQ-224"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ere-6o-GLC" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="130" y="634" width="154" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الهدف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-7x-EAI">
+                                <rect key="frame" x="207" y="215" width="187" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="euu-Vz-bps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="المجمع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-2R-NaM">
+                                <rect key="frame" x="207" y="428" width="187" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="6eP-cT-Rsi">
+                                <rect key="frame" x="63" y="545" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ns2-HR-1RU">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="فيسبوك"/>
+                                        <connections>
+                                            <action selector="fbShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13X-TO-N4c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ca-Z6-jpn">
+                                        <rect key="frame" x="120" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="هاتف"/>
+                                        <connections>
+                                            <action selector="shareTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSs-TB-APv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH6-3k-LZP">
+                                        <rect key="frame" x="240" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bam-Nr-cuK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="1n0-fd-TAt"/>
+                            <constraint firstItem="sQ1-7x-EAI" firstAttribute="top" secondItem="Bam-Nr-cuK" secondAttribute="bottom" constant="8" id="3Sz-6O-vjx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sQ1-7x-EAI" secondAttribute="trailing" constant="20" id="9x8-lt-1wP"/>
+                            <constraint firstItem="6eP-cT-Rsi" firstAttribute="centerX" secondItem="ere-6o-GLC" secondAttribute="centerX" id="CmK-Ri-y7B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PBm-R9-qUx" secondAttribute="trailing" constant="44" id="EeS-Jv-jrQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bam-Nr-cuK" secondAttribute="trailing" constant="44" id="JKZ-Ek-SXk"/>
+                            <constraint firstItem="PBm-R9-qUx" firstAttribute="top" secondItem="Bam-Nr-cuK" secondAttribute="bottom" constant="22" id="Lb9-JS-laH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6eP-cT-Rsi" secondAttribute="trailing" constant="63" id="Ttk-wp-ylQ"/>
+                            <constraint firstItem="3uD-qj-NxS" firstAttribute="centerX" secondItem="6eP-cT-Rsi" secondAttribute="centerX" id="UCz-WB-AfM"/>
+                            <constraint firstItem="Bam-Nr-cuK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Yi6-f8-Wta"/>
+                            <constraint firstItem="sQ1-7x-EAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="207" id="e1a-sL-cM2"/>
+                            <constraint firstItem="3uD-qj-NxS" firstAttribute="centerX" secondItem="PBm-R9-qUx" secondAttribute="centerX" id="eOs-HQ-ryj"/>
+                            <constraint firstItem="3uD-qj-NxS" firstAttribute="top" secondItem="PBm-R9-qUx" secondAttribute="bottom" constant="55" id="fgH-1e-EzT"/>
+                            <constraint firstItem="PBm-R9-qUx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="jI5-Jn-1S6"/>
+                            <constraint firstItem="ere-6o-GLC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="mEh-A0-QcS"/>
+                            <constraint firstItem="6eP-cT-Rsi" firstAttribute="top" secondItem="3uD-qj-NxS" secondAttribute="bottom" constant="31" id="o3I-BI-5pZ"/>
+                            <constraint firstItem="ere-6o-GLC" firstAttribute="top" secondItem="6eP-cT-Rsi" secondAttribute="bottom" constant="59" id="ppm-R3-sYG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PBm-R9-qUx" secondAttribute="bottom" constant="433" id="yYO-QF-IeY"/>
+                            <constraint firstItem="6eP-cT-Rsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="zNa-mR-u1V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="TotalLabel" destination="Nst-2R-NaM" id="WRi-X8-kxm"/>
+                        <outlet property="collectedLabel" destination="sQ1-7x-EAI" id="6KP-f1-UND"/>
+                        <outlet property="ring" destination="PBm-R9-qUx" id="0fU-8P-J0z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="134.59821428571428"/>
+        </scene>
+        <!--DonateVC-->
+        <scene sceneID="mkW-M2-5Ur">
+            <objects>
+                <viewController id="IKI-28-ifl" customClass="DonateVC" customModule="AppGain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ttz-Fu-oR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-wa-JcM" customClass="CBPinEntryView" customModule="CBPinEntryView">
+                                <rect key="frame" x="88" y="232" width="238" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TP4-MA-0qw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="entryCornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="entryDefaultBorderColour">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyboardType">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaS-nw-VWr">
+                                <rect key="frame" x="153" y="328" width="108" height="30"/>
+                                <state key="normal" title="اعادة ادخال الرقم "/>
+                                <connections>
+                                    <action selector="resetButton:" destination="IKI-28-ifl" eventType="touchUpInside" id="MST-oC-XbT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="برجاء ادخال الرقم المرسل  ٥١١٥" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9D-Q5-vbp">
+                                <rect key="frame" x="64" y="108" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uMc-nh-PQV" firstAttribute="trailing" secondItem="T9D-Q5-vbp" secondAttribute="trailing" constant="64" id="026-Qr-5xI"/>
+                            <constraint firstItem="4oi-wa-JcM" firstAttribute="top" secondItem="uMc-nh-PQV" secondAttribute="top" constant="232" id="3fA-IL-pa3"/>
+                            <constraint firstItem="T9D-Q5-vbp" firstAttribute="leading" secondItem="uMc-nh-PQV" secondAttribute="leading" constant="64" id="Aeh-SC-oJb"/>
+                            <constraint firstItem="NaS-nw-VWr" firstAttribute="centerX" secondItem="4oi-wa-JcM" secondAttribute="centerX" id="YO6-bz-Eg5"/>
+                            <constraint firstItem="T9D-Q5-vbp" firstAttribute="top" secondItem="uMc-nh-PQV" secondAttribute="top" constant="108" id="d3c-ep-8iV"/>
+                            <constraint firstItem="NaS-nw-VWr" firstAttribute="top" secondItem="4oi-wa-JcM" secondAttribute="bottom" constant="56" id="eIF-dC-gsp"/>
+                            <constraint firstItem="uMc-nh-PQV" firstAttribute="trailing" secondItem="4oi-wa-JcM" secondAttribute="trailing" constant="88" id="p0m-mY-ZPv"/>
+                            <constraint firstItem="4oi-wa-JcM" firstAttribute="leading" secondItem="uMc-nh-PQV" secondAttribute="leading" constant="88" id="vfs-YX-BK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uMc-nh-PQV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="63a-5o-SXW"/>
+                    <connections>
+                        <outlet property="otpTF" destination="4oi-wa-JcM" id="JXT-TV-osh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0DJ-BC-3aF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="135.9375"/>
         </scene>
     </scenes>
 </document>
